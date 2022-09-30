@@ -1,0 +1,40 @@
+.copy-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    opacity: 0;
+}
+
+.copy-popup{
+    background: white;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.5rem;
+    transition: all 0.9s ease;
+    min-width: 14vw;
+    min-height: 10vh;
+    transform: translateY(-7rem);
+}
+
+.copy-popup.active{
+    animation: dropDown 2.5s;
+}
+
+.copy-popup h3{
+    padding-top: .8rem;
+}
+
+@keyframes dropDown{
+    20%{
+        transform: translateY(1rem);
+    }
+    75%{
+        transform: translateY(-7rem);
+    }
+}
